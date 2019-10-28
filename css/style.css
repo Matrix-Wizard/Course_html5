@@ -6,7 +6,8 @@ body {
 }
 
 .container {
-  width: 1180px;
+  width: 1280px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
