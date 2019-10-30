@@ -1,17 +1,46 @@
 $bg-color: #445162
+$bg-color2: #f5f5f5
+=test
+  color: #fff
 
 body
   font-family: Arial, sans-serif
   box-sizing: border-box
   color: $bg-color
+
 .container
   width: 1280px
-  padding: 0 50px
+  padding: 50px 50px
   margin: 0 auto
 
-header
+.heading
+  color: $bg-color
+  font-size: 30px
+  font-weight: 400
+  line-height: 36px
+  text-align: center
+  margin-bottom: 29px
+
+.paragraph
+  color: #333333
+  font-size: 16px
+  font-weight: 400
+  line-height: 24px
+
+.flex
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+
+
+// Блок header
+.header
   background-color: $bg-color
-  padding: 50px 0
+  &-img
+    width: 469px
+    height: 214px
+    background-color: #fff
   h1
     color: #ffffff
     font-size: 60px
@@ -30,37 +59,54 @@ header
       content: '\f00c'
       margin-right: 10px
 
-.header-img
-  width: 469px
-  height: 214px
-  background-color: #fff
-.header-container
-  display: flex
-  justify-content: space-between
 
 
 // section about
 .about
-  padding: 50px 0
-.about-container
-  display: flex
-  justify-content: space-between
-.about-text
-  max-width: 660px
+  &-text
+    max-width: 660px
+    p:nth-child(2)
+      margin-bottom: 20px
+  &-img
+    width: 430px
+    height: 245px
+    background-color: $bg-color
   h2
-    color: $bg-color
-    font-size: 30px
-    font-weight: 400
+    text-align: left
+
+
+// section advantages
+.advantages
+  background-color: $bg-color2
+  ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  li
+    background: url(../img/plus-marker.png) no-repeat 0px 5px
+    padding-left: 41px
+    max-width: 567px
+    margin-bottom: 35px
+  li:nth-last-child(-n+2)
+    margin-bottom: 0
+
+
+
+// section 
+.scrinshots
+  &-img
+    width: 200px
+    height: 150px
+    background-color: $bg-color
+    float: left
+    margin-right: 15px
+  &-item
+    max-width: 580px
     margin-bottom: 30px
-  p
-    color: #333333
-    font-size: 16px
-    font-weight: 400
-    line-height: 24px
-  p:nth-child(2)
-    margin-bottom: 20px
-  
-.about-img
-  width: 430px
-  height: 245px
-  background-color: $bg-color
+    h3
+      color: $bg-color
+      font-size: 24px
+      font-weight: 400
+      margin-bottom: 10px
+    &::nth-last-child(-n+2)
+      margin-bottom: 0
