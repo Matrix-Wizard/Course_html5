@@ -142,4 +142,54 @@ body {
 .scrinshots-item::nth-last-child(-n+2) {
   margin-bottom: 0;
 }
+
+.reviews {
+  background-color: #f5f5f5;
+}
+
+.reviews-item {
+  max-width: 600px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.reviews-img {
+  min-width: 75px;
+  height: 75px;
+  background-color: #445162;
+  border-radius: 50%;
+  margin-right: 28px;
+}
+
+.reviews-blockquote {
+  max-width: 455px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 15px 20px;
+  background-color: #ebebeb;
+  position: relative;
+}
+
+.reviews-blockquote p {
+  margin-bottom: 15px;
+}
+
+.reviews-blockquote cite {
+  color: #989898;
+}
+
+.reviews-blockquote:before {
+  content: "";
+  padding: 10px;
+  position: absolute;
+  background-color: #ebebeb;
+  top: 27px;
+  left: -10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
 /*# sourceMappingURL=style.css.map */
