@@ -103,13 +103,14 @@ body
   &-item
     max-width: 580px
     margin-bottom: 30px
+    &:nth-last-child(-n+2)
+      margin-bottom: 0
     h3
       color: $bg-color
       font-size: 24px
       font-weight: 400
       margin-bottom: 10px
-    &::nth-last-child(-n+2)
-      margin-bottom: 0
+    
 
 // section reviews
 .reviews
@@ -118,6 +119,8 @@ body
     max-width: 600px
     margin-bottom: 30px
     display: flex
+    &:nth-last-child(-n+2)
+      margin-bottom: 0
   &-img
     min-width: 75px
     height: 75px
@@ -145,3 +148,48 @@ body
       top: 27px
       left: -10px
       transform: rotate(45deg)
+
+// section price
+.price
+  &-wrap
+    max-width: 100%
+    padding: 0 95px
+  &-item
+    text-align: center
+    border: 2px solid $bg-color
+    border-radius: 5px
+    
+  &-rank
+    color: #fff
+    font-size: 24px
+    font-weight: 400
+    background-color: $bg-color
+    padding: 16px 0 
+  &-value
+    color: $bg-color
+    font-size: 40px
+    font-weight: 400
+    padding: 18px 0 
+  &-list
+    background-color: $bg-color
+    ol
+      padding: 19px 20px
+      list-style: decimal inside
+      color: #fff
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+      background-color: $bg-color
+      text-align: left
+  &-button
+    color: $bg-color
+    font-size: 18px
+    font-weight: 400
+    line-height: 18px
+    text-transform: uppercase
+    background-color: #fff
+    padding: 13px 110px
+    border-radius: 5px
+    margin-bottom: 20px
+    margin-left: 20px
+    margin-right: 20px

@@ -132,15 +132,15 @@ body {
   margin-bottom: 30px;
 }
 
+.scrinshots-item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
+
 .scrinshots-item h3 {
   color: #445162;
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 10px;
-}
-
-.scrinshots-item::nth-last-child(-n+2) {
-  margin-bottom: 0;
 }
 
 .reviews {
@@ -153,6 +153,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.reviews-item:nth-last-child(-n+2) {
+  margin-bottom: 0;
 }
 
 .reviews-img {
@@ -191,5 +195,60 @@ body {
   left: -10px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+.price-wrap {
+  max-width: 100%;
+  padding: 0 95px;
+}
+
+.price-item {
+  text-align: center;
+  border: 2px solid #445162;
+  border-radius: 5px;
+}
+
+.price-rank {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  background-color: #445162;
+  padding: 16px 0;
+}
+
+.price-value {
+  color: #445162;
+  font-size: 40px;
+  font-weight: 400;
+  padding: 18px 0;
+}
+
+.price-list {
+  background-color: #445162;
+}
+
+.price-list ol {
+  padding: 19px 20px;
+  list-style: decimal inside;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #445162;
+  text-align: left;
+}
+
+.price-button {
+  color: #445162;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: #fff;
+  padding: 13px 110px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */
