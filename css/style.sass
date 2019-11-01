@@ -154,11 +154,12 @@ body
   &-wrap
     max-width: 100%
     padding: 0 95px
+    align-items: flex-end
   &-item
     text-align: center
     border: 2px solid $bg-color
     border-radius: 5px
-    
+
   &-rank
     color: #fff
     font-size: 24px
@@ -184,7 +185,7 @@ body
   &-button
     color: $bg-color
     font-size: 18px
-    font-weight: 400
+    font-weight: 700
     line-height: 18px
     text-transform: uppercase
     background-color: #fff
@@ -193,3 +194,65 @@ body
     margin-bottom: 20px
     margin-left: 20px
     margin-right: 20px
+
+@font-face
+  font-family: SocialIco
+  src: url("../fonts/Socialico.ttf")
+
+// section footer
+.contacts
+  background-color: $bg-color
+  
+  &-wrap
+    padding: 0 250px
+  h2
+    color: #fff
+  &-form
+    display: flex
+    flex-direction: column
+    width: 500px
+    & > *
+      border-radius: 5px
+      margin-bottom: 20px
+      color: $bg-color
+      font-size: 16px
+      font-weight: 400
+      padding: 12px 10px
+      font-family: Arial, sans-serif
+    & input[type="submit"]
+      width: 140px
+      height: 40px
+      font-weight: 700
+      padding: 0
+      text-transform: uppercase
+      background-color: #fff
+      align-self: center
+      margin-bottom: 0
+  &-list
+    color: #fff
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    li
+      margin-bottom: 15px
+      padding-left: 33px
+  &-social
+    font-family: SocialIco, sans-serif
+    color: #fff
+    font-size: 60px
+.skype_icon
+  background: url('../img/skype_icon.png') no-repeat
+.icq_icon
+  background: url('../img/icq_icon.png') no-repeat
+.email_icon
+  background: url('../img/email_icon.png') no-repeat
+.phone_icon
+  background: url('../img/phone_icon.png') no-repeat
+
+
+.copyright
+  color: $bg-color
+  background-color: $bg-color2
+  text-align: center
+  font-size: 14px
+  padding: 10px
