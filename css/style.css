@@ -75,7 +75,7 @@ body {
 
 @media (max-width: 1080px) {
   .container {
-    width: 95%;
+    width: 92%;
     padding: 25px 0;
   }
   .header-flex {
@@ -94,9 +94,6 @@ body {
     -o-object-fit: contain;
        object-fit: contain;
   }
-  footer {
-    display: none;
-  }
   .header h1 {
     margin-bottom: 30px;
     font-size: 40px;
@@ -109,6 +106,20 @@ body {
 
 .about-text p:nth-child(2) {
   margin-bottom: 20px;
+}
+
+.about-video {
+  width: 100%;
+  max-width: 430px;
+}
+
+.about-video_tag {
+  width: 100%;
+  max-height: 245px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .about h2 {
@@ -286,6 +297,47 @@ body {
           transform: rotate(45deg);
 }
 
+@media (max-width: 750px) {
+  .reviews-flex {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reviews-item {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .reviews-item:nth-child(3) {
+    margin-bottom: 20px;
+  }
+  .reviews-img {
+    width: 75px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+  }
+  .reviews-blockquote:before {
+    top: -10px;
+    left: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 1300px) {
+  .reviews-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .reviews-item:nth-child(3) {
+    margin-bottom: 30px;
+  }
+}
+
 .price-wrap {
   max-width: 100%;
   padding: 0 95px;
@@ -344,6 +396,26 @@ body {
   margin-right: 20px;
 }
 
+@media (max-width: 1228px) {
+  .price-wrap {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .price-item {
+    margin-bottom: 25px;
+  }
+}
+
 @font-face {
   font-family: SocialIco;
   src: url("../fonts/Socialico.ttf");
@@ -354,7 +426,8 @@ body {
 }
 
 .contacts-wrap {
-  padding: 0 250px;
+  max-width: 780px;
+  margin: 0 auto;
 }
 
 .contacts h2 {
@@ -429,11 +502,65 @@ body {
   background: url("../img/phone_icon.png") no-repeat;
 }
 
+@media (max-width: 840px) {
+  .contacts-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts-form {
+    margin-bottom: 35px;
+    max-width: 100%;
+  }
+}
+
 .copyright {
   color: #445162;
   background-color: #f5f5f5;
   text-align: center;
   font-size: 14px;
   padding: 10px;
+}
+
+.video {
+  width: 100%;
+  height: 500px;
+  opacity: 0.3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.scrinshots {
+  position: relative;
+}
+
+.onVideo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1300px) {
+  .video {
+    display: none;
+  }
+  .onVideo {
+    position: relative;
+  }
 }
 /*# sourceMappingURL=style.css.map */
