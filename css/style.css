@@ -528,6 +528,9 @@ body {
 
 .scrinshots {
   position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#f5f5f5)) bottom center no-repeat;
+  background: linear-gradient(#f5f5f5, #f5f5f5) bottom center no-repeat;
+  background-size: 100% 3px;
 }
 
 .video-bg {
@@ -561,7 +564,11 @@ body {
   }
 }
 
-.level {
+.contacts input[name="myWay"] {
+  width: 50%;
+}
+
+.contacts .level {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -571,5 +578,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contacts .level * {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=style.css.map */
