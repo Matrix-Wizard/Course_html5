@@ -3,13 +3,16 @@ $bg-color2: #f5f5f5
 =test
   color: #fff
 
+img
+  max-width: 100%
+
 body
   font-family: Arial, sans-serif
   box-sizing: border-box
   color: $bg-color
 
 .container
-  width: 1280px
+  max-width: 1280px
   padding: 50px 50px
   margin: 0 auto
 
@@ -38,9 +41,9 @@ body
 .header
   background-color: $bg-color
   &-img
-    width: 469px
-    height: 214px
-    background-color: #fff
+    // width: 469px
+    // height: 214px
+    // background-color: #fff
   h1
     color: #ffffff
     font-size: 60px
@@ -59,6 +62,23 @@ body
       content: '\f00c'
       margin-right: 10px
 
+@media (max-width: 1080px)
+  .container
+    width: 92%
+    padding: 25px 0
+  .header-flex
+    flex-direction: column
+  .header-text
+    align-self: center
+    margin-bottom: 25px
+  .header-img
+    object-fit: contain
+  .header
+    h1
+      margin-bottom: 30px
+      font-size: 40px
+
+
 
 
 // section about
@@ -67,12 +87,33 @@ body
     max-width: 660px
     p:nth-child(2)
       margin-bottom: 20px
-  &-img
-    width: 430px
-    height: 245px
-    background-color: $bg-color
+  &-video
+    width: 100%
+    max-width: 430px
+    &_tag
+      width: 100%
+      max-height: 245px
+      object-fit: cover
+      object-position: top
   h2
     text-align: left
+  &-flex
+    flex-wrap: nowrap
+
+@media (max-width: 1080px)
+  .about
+    &-text
+      max-width: 660px
+      p:nth-child(3)
+        margin-bottom: 20px
+    &-flex
+      flex-direction: column
+    &-img
+      object-fit: contain
+      align-self: flex-start
+
+
+
 
 
 // section advantages
@@ -90,8 +131,23 @@ body
   li:nth-last-child(-n+2)
     margin-bottom: 0
 
+@media (max-width: 600px)
+  .advantages
+    li
+      padding-top: 40px
+      background: url(../img/plus-marker.png) no-repeat center top
+      padding-left: 0
+  
 
-
+@media (max-width: 1320px)
+  .advantages
+    li:nth-child(5)
+      margin-bottom: 35px
+    ul
+      flex-direction: column
+      align-items: center
+    
+  
 // section scrinshots
 .scrinshots
   &-img
@@ -110,7 +166,18 @@ body
       font-size: 24px
       font-weight: 400
       margin-bottom: 10px
-    
+@media (max-width: 1270px)
+  .scrinshots
+    &-flex
+      justify-content: center
+    &-item:nth-child(3)
+      margin-bottom: 30px
+@media (max-width: 800px)
+  .scrinshots
+    &-img
+      float: none
+      margin-bottom: 20px
+
 
 // section reviews
 .reviews
@@ -148,6 +215,33 @@ body
       top: 27px
       left: -10px
       transform: rotate(45deg)
+@media (max-width: 750px)
+  .reviews
+    &-flex
+      justify-content: center
+      flex-direction: column
+    &-item
+      display: block
+      margin: 0 auto
+      margin-bottom: 20px
+      &:nth-child(3)
+        margin-bottom: 20px
+    &-img
+      width: 75px
+      margin: 0 auto
+      margin-bottom: 25px
+    &-blockquote
+      &:before
+        top: -10px
+        left: calc(50% - 10px)
+@media (max-width: 1300px)
+  .reviews
+    &-flex
+      flex-direction: column
+    &-item
+      &:nth-child(3)
+        margin-bottom: 30px
+
 
 // section price
 .price
@@ -194,6 +288,19 @@ body
     margin-bottom: 20px
     margin-left: 20px
     margin-right: 20px
+@media (max-width: 1228px)
+  .price
+    &-wrap
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      flex-wrap: nowrap
+    &-item
+      margin-bottom: 25px
+
+
+
+
 
 @font-face
   font-family: SocialIco
@@ -204,7 +311,8 @@ body
   background-color: $bg-color
   
   &-wrap
-    padding: 0 250px
+    max-width: 780px
+    margin: 0 auto
   h2
     color: #fff
   &-form
@@ -249,6 +357,14 @@ body
 .phone_icon
   background: url('../img/phone_icon.png') no-repeat
 
+@media (max-width: 840px)
+  .contacts
+    &-flex
+      flex-direction: column
+      align-items: center
+    &-form
+      margin-bottom: 35px
+      max-width: 100%
 
 .copyright
   color: $bg-color
@@ -256,3 +372,48 @@ body
   text-align: center
   font-size: 14px
   padding: 10px
+
+
+// Вставка фонового видео
+.scrinshots
+  position: relative
+  background: linear-gradient($bg-color2,$bg-color2) bottom center no-repeat
+  background-size: 100% 3px
+
+.video-bg
+  width: 100%
+  height: 500px
+  object-fit: cover
+  object-position: center center
+  opacity: 0.4
+
+.video-bg-position
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  overflow: hidden
+  box-sizing: border-box
+  border-bottom: 3px solid $bg-color2
+  
+
+@media (max-width: 1000px)
+  .video-bg
+    display: none
+  .video-bg-position
+    position: relative
+
+.contacts
+  input[name="myWay"]
+    width: 50%
+  .level
+    color: #fff
+    font-size: 16px
+    font-weight: 400
+    display: flex
+    align-items: center
+    *
+      margin-right: 10px
+
+

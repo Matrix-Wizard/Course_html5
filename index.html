@@ -2,6 +2,7 @@
 <html lang="zxx">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/reset.css">
   <script src="https://kit.fontawesome.com/b03ae60cc9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/style.css">
@@ -10,7 +11,7 @@
 </head>
 <body>
   <header class="header">
-    <div class="container flex">
+    <div class="container flex header-flex">
       <div class="header-text">
         <h1>Product name</h1>
         <ul>
@@ -20,14 +21,15 @@
           <li>Associate the page with the payment system</li>
         </ul>
       </div>
-      <div class="header-img"></div>
+      <img class="header-img" src="https://placeimg.com/469/214/any/sepia" alt="Картинка">
+      <!-- <div class="header-img"></div> -->
     </div>
     <!-- end container -->
   </header>
   
   <main>
     <section class="about">
-      <div class="container flex">
+      <div class="container flex about-flex">
         <div class="about-text">
           <h2 class="heading">About your product</h2>
           <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo at.
@@ -38,7 +40,13 @@
             ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde perferendis nemo
             debitis dolor.</p>
         </div>
-        <div class="about-img"></div>
+        <!-- <img class="about-img" src="https://placeimg.com/430/245/any/sepia" alt="Картинка"> -->
+        <div class="about-video">
+          <video class="about-video_tag"
+            src="img/horse-song.mp4"
+            controls preload="none"
+            poster="https://b1.culture.ru/c/528970.jpg"></video>
+        </div>
       </div>
     </section>
     <!-- end about -->
@@ -71,10 +79,10 @@
     </section>
     <!-- end advantages -->
 
-    <section class="scrinshots">
+    <!-- <section class="scrinshots">
       <div class="container">
         <h2 class="heading">Scrinshots</h2>
-        <div class="scrinshots-wrap flex">
+        <div class="scrinshots-wrap flex scrinshots-flex">
           <article class="scrinshots-item">
             <div class="scrinshots-img"></div>
             <h3>The description for the image</h3>
@@ -103,6 +111,53 @@
         </div>
         
       </div>
+    </section> -->
+    <!-- end scrinshots -->
+
+    <section class="scrinshots">
+      <video class="video-bg"
+        src="img/Video Of People Waiting For A Taxi On A Rainy Night.mp4"
+        loop muted autoplay></video>
+      
+      <div class="container video-bg-position">
+        <h2 class="heading">Scrinshots</h2>
+        <div class="scrinshots-wrap flex scrinshots-flex">
+          <article class="scrinshots-item">
+            <div class="scrinshots-img"></div>
+            <h3>The description for the image</h3>
+            <p class="paragraph">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel
+              exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde
+              perferendis nemo debitis dolor.</p>
+          </article>
+
+          <article class="scrinshots-item">
+            <div class="scrinshots-img"></div>
+            <h3>The description for the image</h3>
+            <p class="paragraph">Pariatur iure ab sunt nesciunt, quibusdam odio iste cumque itaque, ipsa vel
+              exercitationem ullam quos aut nostrum cupiditate fuga quaerat quam animi dolores. Sequi itaque, unde
+              perferendis nemo debitis dolor.</p>
+          </article>
+
+          <article class="scrinshots-item">
+            <div class="scrinshots-img"></div>
+            <h3>The description for the image</h3>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo at.
+              Natus eos, eligendi illum rerum omnis porro ex, magni, explicabo veniam incidunt in quam sapiente ut
+              ipsum.</p>
+          </article>
+
+          <article class="scrinshots-item">
+            <div class="scrinshots-img"></div>
+            <h3>The description for the image</h3>
+            <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis fuga, illo at.
+              Natus eos, eligendi illum rerum omnis porro ex, magni, explicabo veniam incidunt in quam sapiente ut
+              ipsum.</p>
+          </article>
+        </div>
+      </div>
+
+        
+      
     </section>
     <!-- end scrinshots -->
 
@@ -110,7 +165,7 @@
       <div class="container">
         <h2 class="heading">Reviews</h2>
 
-        <div class="reviews-wrap flex">
+        <div class="reviews-wrap flex reviews-flex">
           <div class="reviews-item">
             <div class="reviews-img"></div>
             <blockquote class="reviews-blockquote">
@@ -222,11 +277,25 @@
   <footer class="contacts">
     <div class="container">
       <h2 class="heading">Contacts</h2>
-      <div class="contacts-wrap flex">
+      <div class="contacts-wrap flex contacts-flex">
         <form class="contacts-form" action="#">
           <input type="text" placeholder="Your name:">
           <input type="email" placeholder="Your email:">
           <textarea cols="30" rows="7" placeholder="Your message:"></textarea>
+          
+          <input list="way" name="myWay" placeholder="Choose your way:" required>
+          <datalist id="way">
+            <option value="Left">
+            <option value="Right">
+            <option value="Up">
+            <option value="Down">
+          </datalist>
+          <div class="level">
+            <label for="happy">Smile level: </label>
+            <input oninput="happyValue.value = (happy.value)" id="happy" type="range" min="0" max="100" value="50"
+              name="level">
+            <output id="happyValue">50</output>
+          </div>
           <input type="submit" value="send">
         </form>
         <div class="contacts-details">
